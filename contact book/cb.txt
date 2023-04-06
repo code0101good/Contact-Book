@@ -1,0 +1,20 @@
+Need a window for input. Input "Name, Number, Place"
+This should be stored into notepad.
+All contacts should be stored in one place.
+
+
+First, we import the necessary modules - tkinter and messagebox - and create a root window using the Tk() method.
+
+We then create a canvas with a specific width and height, and pack it into the root window. We also create a label widget to display the name of the contact book application, and add it to the canvas using the create_window() method.
+
+Next, we create two more label widgets to display the prompt text for the name and number input fields, and add them to the canvas using the create_window() method.
+
+We create two Entry() widgets to allow the user to input the name and number for a new contact, and add them to the canvas using the create_window() method.
+
+Finally, we create a button widget with the text "Add Contact", and add it to the canvas using the create_window() method. We also define a function add_contact() to handle the button click event.
+
+In the add_contact() function, we get the values entered in the name and number entry fields using the get() method. We then open the "contacts.txt" file in append mode ("a") and write the contact information to the file using the write() method. The with statement ensures that the file is properly closed after the write operation is completed.
+
+Lastly, we show a success message using the messagebox.showinfo() method to indicate that the contact has been added successfully.
+
+So when the user enters the name and number of a new contact and clicks the "Add Contact" button, the contact information is written to a file named "contacts.txt". This allows the user to keep adding new contacts, with each new contact being appended to the existing file.
